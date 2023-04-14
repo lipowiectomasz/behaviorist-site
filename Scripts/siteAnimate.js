@@ -46,7 +46,7 @@ $(document).ready(function () {
         () => {
             let val;
             let currNavHeight = parseInt($("#header-container nav").css("height"));
-            val = (currNavHeight < startNavHeight) ? "48vh" : "8vh";
+            val = (currNavHeight < startNavHeight) ? "56vh" : "8vh";
             $("#header-container nav").animate({ height: val }, 700);
         }
     );
@@ -128,7 +128,7 @@ $(document).scroll(() => {
 
     Math.floor($("#about-container").position().top * 0.7) < $(document).scrollTop() ? changeVisibility("about", 1) : changeVisibility("about", 0);
 
-    Math.floor($("#offer-container").position().top * 0.7) < $(document).scrollTop() ? changeVisibility("offer", 1) : changeVisibility("offer", 0);
+    Math.floor($("#offer-container").position().top * 0.6) < $(document).scrollTop() ? changeVisibility("offer", 1) : changeVisibility("offer", 0);
 
     Math.floor($("#certificates-container").position().top * 0.75) < $(document).scrollTop() ? changeVisibility("certificates", 1) : changeVisibility("certificates", 0);
 
