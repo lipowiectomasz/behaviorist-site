@@ -128,7 +128,9 @@ $(document).scroll(() => {
 
     Math.floor($("#about-container").position().top * 0.7) < $(document).scrollTop() ? changeVisibility("about", 1) : changeVisibility("about", 0);
 
-    Math.floor($("#offer-container").position().top * 0.6) < $(document).scrollTop() ? changeVisibility("offer", 1) : changeVisibility("offer", 0);
+    // Math.floor($("#offer-container").position().top * 0.7) < $(document).scrollTop() ? changeVisibility("offer", 1) : changeVisibility("offer", 0);
+
+    Math.floor($("#offer-container").position().top * 0.8) < $(document).scrollTop() ? changeOfferVisibility(1) : changeOfferVisibility(0);
 
     Math.floor($("#certificates-container").position().top * 0.75) < $(document).scrollTop() ? changeVisibility("certificates", 1) : changeVisibility("certificates", 0);
 
@@ -139,6 +141,45 @@ $(document).scroll(() => {
     Math.floor($("#contact-container").position().top * 0.7) < $(document).scrollTop() ? changeVisibility("contact", 1) : changeVisibility("contact", 0);
 
 });
+
+function changeOfferVisibility(mode){
+
+    //mode == 1 ? changeVisibility("offer", 1) : changeVisibility("offer", 0);
+    let section = "offer";
+
+    let visibility = mode == 1 ? false : true;
+    if (visiblities[section] == visibility) {
+        visiblities[section] = !visibility;
+
+        if(mode == 1){
+
+            $("#" + section + "-container").animate(
+                { opacity: mode }, 
+                300,
+                () => {
+                    $(".offer:eq(0)").animate({ left: 7 + "px" }, 600);
+                    $(".offer:eq(1)").animate({ left: -7 + "px" }, 600);
+                }
+            );
+        }
+        else{
+            $(".offer:eq(0)").animate({
+                left: -100 + "%" 
+            }, 600);
+            $(".offer:eq(1)").animate({
+                left: 100 + "%" 
+            }, 600);
+            setTimeout(
+                () => {
+                    $("#" + section + "-container").animate({ 
+                        opacity: mode
+                    }, 600);
+                },
+                600
+            )
+        }
+    }
+}
 
 function dogSlider() {
     let currentSlide = getCurrentDogSlide();

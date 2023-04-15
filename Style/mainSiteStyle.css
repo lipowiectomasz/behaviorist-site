@@ -357,8 +357,7 @@ nav a p:hover span{
   height: 100%;
 }
 
-#hello-image img{
-  
+#hello-image img{ 
   height: 100%;
 }
 #dog1{
@@ -447,23 +446,33 @@ nav a p:hover span{
   aspect-ratio: 4/3;
   width: 50%;
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   flex-direction: column;
   box-sizing: border-box;
   padding: 5%;
+  box-shadow: 5px 5px 15px rgb(0, 0, 0);
+  border-radius: 15px;
 }
 .offer:nth-child(1){
   background-color: antiquewhite;
-  left: 10px;
+  left: 7px;
+  left: -100%;
 }
 .offer:nth-child(2){
   background-color: rgb(160, 129, 127);
   top: 20px;
-  left: -10px;
+  /* left: -7px; */
+  left: 100%;
   text-align: center;
 }
-
+.offer p{
+  margin: 2% 0 2% 0;
+  padding-left: 5%;
+}
+.offer p:nth-child(1){
+  padding-left: 0;
+  margin-bottom: 3%;
+}
 #certificates {
   background-image: url("../Images/backgroundP3.svg");
   background-repeat: no-repeat;
