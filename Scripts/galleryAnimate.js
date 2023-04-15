@@ -1,38 +1,5 @@
 var visiblitiGoTo = false;
-// $("#hideGallery").fadeOut(0);
 $("#gallery-view").fadeOut(0);
-// $("#gallery-container").animate({ opacity: 0 }, 100);
-
-// $("#gallery-box").hover(
-//     ()=>{
-//         $("#gallery-mask").animate({ opacity: 0.5},400);
-//         $("#goToGallery").animate({ opacity: 1},400);
-//     },
-//     ()=>{
-//         $("#gallery-mask").animate({ opacity: 0},400);
-//         $("#goToGallery").animate({ opacity: 0},400);
-//     }
-// );
-
-// $("#goToGallery").click( 
-//     ()=>{
-//         galleryMode = true;
-//         $("#gallery-box").animate({ height: $("#gallery-box")[0].scrollHeight}, 500);
-//         $("#hideGallery").fadeIn(500);
-//         $("#gallery-mask").fadeOut(500);
-//         $("#goToGallery").fadeOut(500);
-//     } 
-// );
-
-// $("#hideGallery").click( 
-//     ()=>{
-//         galleryMode = false;
-//         $("#gallery-box").animate({ height: 580+'px'}, 500);
-//         $("#hideGallery").fadeOut(500);
-//         $("#gallery-mask").fadeIn(500);
-//         $("#goToGallery").fadeIn(500);
-//     } 
-// );
 $("body").fadeOut(0);
 
 $(document).ready(() => {

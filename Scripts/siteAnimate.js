@@ -128,8 +128,6 @@ $(document).scroll(() => {
 
     Math.floor($("#about-container").position().top * 0.7) < $(document).scrollTop() ? changeVisibility("about", 1) : changeVisibility("about", 0);
 
-    // Math.floor($("#offer-container").position().top * 0.7) < $(document).scrollTop() ? changeVisibility("offer", 1) : changeVisibility("offer", 0);
-
     Math.floor($("#offer-container").position().top * 0.8) < $(document).scrollTop() ? changeOfferVisibility(1) : changeOfferVisibility(0);
 
     Math.floor($("#certificates-container").position().top * 0.75) < $(document).scrollTop() ? changeVisibility("certificates", 1) : changeVisibility("certificates", 0);
@@ -144,7 +142,7 @@ $(document).scroll(() => {
 
 function changeOfferVisibility(mode){
 
-    //mode == 1 ? changeVisibility("offer", 1) : changeVisibility("offer", 0);
+    
     let section = "offer";
 
     let visibility = mode == 1 ? false : true;
@@ -152,7 +150,6 @@ function changeOfferVisibility(mode){
         visiblities[section] = !visibility;
 
         if(mode == 1){
-
             $("#" + section + "-container").animate(
                 { opacity: mode }, 
                 300,
@@ -161,8 +158,12 @@ function changeOfferVisibility(mode){
                     $(".offer:eq(1)").animate({ left: -7 + "px" }, 600);
                 }
             );
+            $("#" + section + "-container").animate({ 
+                opacity: mode
+            }, 600);
         }
         else{
+            
             $(".offer:eq(0)").animate({
                 left: -100 + "%" 
             }, 600);
@@ -247,14 +248,10 @@ $("#gallery-box").hover(
 $("#goToGallery").click(
     () => {
         galleryMode = true;
-        // $("#gallery-box").animate({ height: $("#gallery-box")[0].scrollHeight}, 500);
-        // $("#hideGallery").fadeIn(500);
         console.log("Going to gallery");
         $("body").fadeOut(500);
         setTimeout(() => {
             window.open("gallery.html", '_self');
         }, 1000);
-        // $("#gallery-mask").fadeOut(500);
-        // $("#goToGallery").fadeOut(500);
     }
 );
