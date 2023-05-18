@@ -2,4 +2,4 @@
 
 Site promotes services of local dog behaviourist from my hometown
 
-Live: [behawiorysta-dzikiteam.pl]
+Live: [behawiorysta-dzikiteam.pl](https://behawiorysta-dzikiteam.pl)
